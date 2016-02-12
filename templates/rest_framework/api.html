@@ -1,0 +1,43 @@
+{% extends "rest_framework/base.html" %}
+
+{% block branding %}
+
+    <a class="brand" rel="nofollow" href="http://www.mailbeaker.com">
+        MailBeaker <span class="version">1</span>
+    </a>
+
+{% endblock %}
+
+{% block style %}
+{{ block.super }}
+
+<style>
+
+    .navbar .navbar-inner {
+        background: #75489C;
+        border: none;
+    }
+
+    .navbar .brand {
+        color: white;
+    }
+
+    body {
+        background-image: none;
+    }
+
+    body a {
+        color: #75489C;
+    }
+
+    body a:hover {
+        color: #75489C;
+    }
+
+    .str {
+        color: #75489C;
+    }
+
+</style>
+
+{% endblock %}

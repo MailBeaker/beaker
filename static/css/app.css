@@ -1,0 +1,178 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #4A4A4A; }
+
+a {
+  color: #37ae76; }
+
+.bold {
+  font-weight: bold; }
+
+.centered {
+  text-align: center; }
+
+.page-header {
+  margin-top: 0; }
+  .page-header h1 {
+    margin-top: 0; }
+
+.navbar {
+  border: 0 none;
+  background: #75489C;
+  border-radius: 0;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
+  .navbar a {
+    color: white; }
+  .navbar .navbar-brand {
+    color: white;
+    border: 1px solid #75489C;
+    font-size: 20px;
+    padding: 10px 15px; }
+    .navbar .navbar-brand i {
+      font-size: 26px;
+      margin-right: 7px;
+      vertical-align: text-bottom; }
+
+.nav > li > a:hover, .nav > li > a:focus, .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background-color: #75489C; }
+
+.nav-pills li a {
+  color: #4A4A4A;
+  padding: 5px 0;
+  text-align: center; }
+  .nav-pills li a:hover {
+    border-radius: 0;
+    background-color: #C0AAFF; }
+.nav-pills li.active a, .nav-pills li.active a:hover, .nav-pills li.active a:focus {
+  background-color: #75489C;
+  border-radius: 0; }
+.nav-pills.nav-stacked.squares {
+  background: #ecf0f1; }
+  .nav-pills.nav-stacked.squares li {
+    margin-top: 0; }
+    .nav-pills.nav-stacked.squares li a {
+      height: 86px; }
+      .nav-pills.nav-stacked.squares li a span.fa {
+        position: relative;
+        display: block;
+        left: auto;
+        top: auto;
+        bottom: auto;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        line-height: 50px;
+        font-size: 32px;
+        color: #4A4A4A;
+        text-shadow: 0 1px 0 #222529; }
+    .nav-pills.nav-stacked.squares li.active a span.fa {
+      color: #ecf0f1;
+      text-shadow: 0 1px 0 #222529; }
+
+.modal-dialog {
+  margin: 55px auto; }
+
+.mb-sidebar {
+  max-width: 130px; }
+
+.main-row {
+  margin-top: 20px; }
+
+.italic {
+  font-style: italic; }
+
+.page-header h1 {
+  display: inline-block; }
+.page-header a.btn.pull-right {
+  top: 8px;
+  right: 15px;
+  position: relative; }
+
+.input-throbber {
+  float: right;
+  margin-top: -27px;
+  margin-right: 9px;
+  font-size: 21px; }
+
+.btn-primary {
+  background-color: #75489C;
+  border-color: #4A4A4A; }
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+    background-color: #37ae76;
+    border-color: #3BBB7F; }
+
+.pagination > li > a, .pagination > li > span {
+  color: #4A4A4A; }
+
+.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
+  color: #75489C; }
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+  background-color: #75489C;
+  border-color: #75489C; }
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  background-color: #75489C; }
+
+.stat {
+  padding: 10px;
+  text-align: center; }
+
+div.member_signin {
+  text-align: center; }
+
+div.member_signin i.fa.fa-user {
+  color: #FFF;
+  background-color: #37ae76;
+  border-radius: 500px;
+  font-size: 36px;
+  padding: 15px 20px 15px 20px; }
+
+div.fa_user {
+  margin-top: -47px;
+  margin-bottom: 15px; }
+
+p.member {
+  font-size: 19px;
+  color: #888888;
+  margin-bottom: 20px; }
+
+button.login {
+  width: 100%;
+  text-transform: uppercase; }
+
+form.loginform div.input-group {
+  width: 100%; }
+
+form.loginform input[type="text"], form.loginform input[type="password"] {
+  color: #6C6C6C; }
+
+p.forgotpass {
+  margin-top: 10px; }
+
+p.forgotpass a {
+  color: #37ae76; }
+
+.signin-button img {
+  width: 100%; }
+  .signin-button img:hover {
+    cursor: pointer; }
+
+.div-table {
+  margin-bottom: 0; }
+  .div-table tr.nocursor {
+    cursor: default; }
+  .div-table tr {
+    cursor: pointer; }
+
+.settings-form .email-list {
+  padding: 5px 0 5px 25px;
+  max-height: 200px;
+  overflow-y: auto; }

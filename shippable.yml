@@ -1,0 +1,30 @@
+# Build Environment
+build_environment: Ubuntu 14.04
+
+# Language
+language: python
+
+python:
+  - 2.7
+
+env:
+  global:
+    - APP_NAME=mb-beaker
+
+install:
+  - pip install -r requirements.txt
+
+before_script:
+  - mkdir -p shippable/testresults
+  - mkdir -p shippable/codecoverage
+  - cp settingslocal.py.test settingslocal.py
+
+script:
+#  - coverage run --branch --source='.' manage.py test --with-xunit --xunit-file=shippable/testresults/nosetests.xml
+#  - coverage xml -o shippable/codecoverage/coverage.xml
+#  - flake8 . --ignore=E501 --exclude=migrations,settings.py,setup_dev.py
+  - coverage run --branch --source='.' manage.py test
+  - coverage xml -o shippable/codecoverage/coverage.xml
+
+#after_success:
+#  - git push -f git@heroku.com:$APP_NAME.git master

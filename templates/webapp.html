@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,300,700' rel='stylesheet' type='text/css'>
+
+        <title>MailBeaker</title>
+
+        <link href="/static/css/app.css" rel="stylesheet">
+
+        <script type="text/javascript">
+            var meta = JSON.parse('{{ meta|escapejs }}');
+        </script>
+
+        <base href="/app/" />
+        <script type="application/javascript" src="/static/js/app.js"></script>
+    </head>
+    <body>
+
+        <nav class="navbar" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/"><i class="fa fa-envelope-o"></i>MailBeaker</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        {% verbatim %}
+                        <a href class="dropdown-toggle" data-ng-show="$root.userService.user">
+                            {{ $root.userService.user.email }} <b class="caret"></b>
+                        </a>
+                        {% endverbatim %}
+                        <a href="/app/auth/login/" data-ng-show="!$root.userService.user">
+                            Login
+                        </a>
+                        
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Account</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/app/auth/logout/">Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="container">
+            <div class="row main-row">
+                <div class="mb-sidebar col-md-2">
+                    {% verbatim %}
+                    <ul role="menu" class="nav nav-pills nav-stacked squares">
+                        <li data-ng-class="{'active': $root.activeNav == 'dashboard'}">
+                            <a data-ng-href="/app/domains/{{ $root.activeDomainId }}/dashboard"
+                               data-ng-show="$root.activeDomainId">
+                                <span class="fa fa-bar-chart-o"></span>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li data-ng-class="{'active': $root.activeNav == 'rules'}">
+                            <a data-ng-href="/app/domains/{{ $root.activeDomainId }}/rules"
+                               data-ng-show="$root.activeDomainId">
+                                <span class="fa fa-check"></span>
+                                Rules
+                            </a>
+                        </li>
+                        <li data-ng-class="{'active': $root.activeNav == 'settings'}">
+                            <a data-ng-href="/app/domains/{{ $root.activeDomainId }}/settings"
+                               data-ng-show="$root.activeDomainId">
+                                <span class="fa fa-cog"></span>
+                                Settings
+                            </a>
+                        </li>
+                        <!--<li data-ng-class="{'active': $root.activeNav == 'new_domain'}">-->
+                            <!--<a href="/domains/create"-->
+                               <!--data-ng-show="$root.meta.organization.id">-->
+                                <!--<span class="fa fa-plus"></span>-->
+                                <!--New Domain-->
+                            <!--</a>-->
+                        <!--</li>-->
+
+                        <!--<li data-ng-class="{'active': $root.activeNav == 'create_organization'}">-->
+                            <!--<a href="/organizations/create"-->
+                               <!--data-ng-show="!$root.meta.organization.id">-->
+                                <!--<span class="fa fa-plus"></span>-->
+                                <!--New Org.-->
+                            <!--</a>-->
+                        <!--</li>-->
+                    </ul>
+                    {% endverbatim %}
+                </div>
+                <div class="mb-main col-md-10" data-ng-view="">
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="footer"></div>
+
+    </body>
+</html>
