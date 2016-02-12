@@ -1,0 +1,9 @@
+.idea
+*.py[co]
+settingslocal.py
+staticfiles
+db
+.coverage
+
+# foreman environment variables
+.env
